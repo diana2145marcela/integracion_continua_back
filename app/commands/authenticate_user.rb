@@ -15,7 +15,7 @@ class AuthenticateUser
   attr_accessor :correo_electronico, :password
 
   def usuario
-    usuario = Usuario.find_by(correo_electronico)
+    usuario = Usuario.find_by(correo_electronico: correo_electronico)
     return usuario if usuario && usuario.authenticate(password)
 
     errors.add :user_authentication, 'Credenciales no válidas'
