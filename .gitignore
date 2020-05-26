@@ -28,3 +28,6 @@
 
 # RubyMine IDE related files
 .idea
+
+# RSpec related files
+spec/examples.txt
