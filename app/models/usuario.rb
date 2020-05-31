@@ -5,5 +5,6 @@ class Usuario < ApplicationRecord
                                    presence: true,
                                    length: { minimum: 5, maximum: 100 },
                                    format: { with: VALID_EMAIL_REGEX } }
+  validates :password, length: { minimum: 6, maximum: 255 }
   has_secure_password
 end
