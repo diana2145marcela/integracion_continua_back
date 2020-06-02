@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_05_25_155616) do
   enable_extension "plpgsql"
 
   create_table "usuarios", force: :cascade do |t|
-    t.string "nombre"
-    t.string "correo_electronico"
+    t.string "nombre", limit: 255, default: "", null: false
+    t.string "correo_electronico", limit: 255, default: "", null: false
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
