@@ -4,14 +4,17 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=somepassword
-
-  web:
-    build: .
-    volumes:
-      - .:/myapp
+  back:
+    image: backend_poli
     ports:
       - "3000:3000"
-    command: rails db:migrate
-    command: rails server -b 0.0.0.0
     depends_on:
       - db
+  front:
+    depends_on:
+      - back
+    image: front_poli
+    environment:
+      - REACT_APP_URL=http://localhost:3000
+    ports:
+      - "4000:5000"
