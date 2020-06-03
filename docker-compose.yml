@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=somepassword
+  back:
+    depends_on:
+      - db
+    image: backend_poli
+
+    ports:
+      - "3000:3000"
+    command: rails db:create
+    command: rails db:migrate
+    command: rails server -b 0.0.0.0
+  front:
+    depends_on:
+      - db
+      - back
+    image: front_poli
+    environment:
+      - REACT_APP_URL=http://localhost:3000
+    ports:
+      - "4000:5000"
