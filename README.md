@@ -1,24 +1,17 @@
-# README
+# Integración Continua Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este proyecto hace parte del [Integracion_continua](https://github.com/users/di3cruz/projects/2) realizado para la materia Integración Continua del Politécnico Grancolombiano.
 
-Things you may want to cover:
+El presente repositorio contiene un proyecto realizado en Ruby on Rails, que sirve como API para el proyecto descrito.
 
-* Ruby version
+Se implementaron los siguientes módulos:
 
-* System dependencies
+## Módulo de registro
 
-* Configuration
+Se implementó un API que responde de la siguiente manera:
 
-* Database creation
+| Ruta | Método | Parámetros | Efecto |
+-------|--------|------------|--------|
+https://integracioncontinuaback.herokuapp.com/usarios | POST | {"usuario":{"nombre":"James Bond","correo_electronico":"jbond@mi6.org","password":"vesper","password_confirmation":"vesper"}} | Con los parámetros adecuados crea un nuevo usuario. |
+https://integracioncontinuaback.herokuapp.com/autenticar | POST | {"correo_electronico":"jbond@mi6.org","password":"vesper"} | Con credenciales válidas devuelve un JSON Web Token usado para autenticar al usuario.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
