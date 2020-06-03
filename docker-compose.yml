@@ -5,13 +5,18 @@ services:
     environment:
       - POSTGRES_PASSWORD=somepassword
   back:
-    image: backend_poli
-    ports:
-      - "3000:3000"
     depends_on:
       - db
+    image: backend_poli
+
+    ports:
+      - "3000:3000"
+    command: rails db:create
+    command: rails db:migrate
+    command: rails server -b 0.0.0.0
   front:
     depends_on:
+      - db
       - back
     image: front_poli
     environment:

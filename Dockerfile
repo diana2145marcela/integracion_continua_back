@@ -9,9 +9,6 @@ COPY Gemfile* ./
 RUN gem install bundler:2.1.4
 # Instalamos dependencias
 RUN bundle install
-# Creamos la conexion y la tabla en la base de datos
-RUN rails db:create
-RUN rails db:migrate
 # Copiamos el codigo de nuestra aplicacion al directorio de trabajo 
 COPY . .
 # Exponemos los puertos de la aplicacio
