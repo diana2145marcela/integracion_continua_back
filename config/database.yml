@@ -20,17 +20,21 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  password: somepassword
+  username: integracion_continua_back
+  password: <%= ENV['INTEGRACION_CONTINUA_BACK_DATABASE_PASSWORD'] %>
+#   password: somepassword # Diego's config
 
 development:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: postgres
-  pool: 5
-  username: postgres
-  password: somepassword
-  host: db
+#  Diego's config
+#  adapter: postgresql
+#  encoding: unicode
+#  database: postgres
+#  pool: 5
+#  username: postgres
+#  password: somepassword
+#  host: db
+  database: integracion_continua_back_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
