@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Prueba integracion') {
       steps {
-        echo 'Integracion continua'
+        echo 'Ingenieria de Software'
       }
     }
 
