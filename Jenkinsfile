@@ -1,16 +1,20 @@
 pipeline {
-  agent {
-    docker {
-      image 'ruby:2.6.5'
-    }
-
-  }
+  agent { docker { image 'ruby:2.6.5' } }
   stages {
-    stage('Prueba integracion') {
+    stage('requirements') {
       steps {
-        echo 'Ingenieria de Software'
+        sh 'gem install bundler -v 2.0.1'
       }
     }
-
+    stage('build') {
+      steps {
+        sh 'bundle install'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'bundle exec rspec'
+      }   
+    }
   }
 }
