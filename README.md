@@ -28,3 +28,35 @@ https://integracioncontinuaback.herokuapp.com/gastos/1 | GET | :id | Devuelve el
 https://integracioncontinuaback.herokuapp.com/gastos | POST | {"gasto":{"nombre":"Compra de TV","fecha":"2020-06-16","monto": "1500000"} | Crea un nuevo gasto con los parámetros especificados. |
 https://integracioncontinuaback.herokuapp.com/gastos/1 | PATCH/PUT | {"gasto":{"nombre":"Compra de TV LED"} | Actualiza el recurso con id 1 con los parámetros especificados. |
 https://integracioncontinuaback.herokuapp.com/gastos/1 | DELETE | - | Elimina el gasto con id 1. |
+
+### Pruebas unitarias implementadas
+
+Se implementaron pruebas unitarias para:
+
+#### Modelos
+
+Modelo de Gasto:
+
+- Creación de un nuevo gasto con datos válidos.
+- Creación de un nuevo gasto con datos no válidos.
+
+#### Requests
+
+Sobre la ruta /autenticar:
+
+- Devolución del token de autenticación cuando el usuario existe en la base de datos.
+- Devolución de statuts `unauthorized`cuando el usuario no existe en la base de datos.
+
+Sobre el controlador de gastos:
+
+- Pruebas sobre la acción index, show, create, update, delete.
+
+Sobre el controlador de usuarios:
+
+- Sobre la acción create con datos válidos y no válidos.
+
+#### Rutas
+
+Sobre cada una de las rutas de gastos.
+
+Los tests pueden encontrarse en el [presente enlace](https://github.com/di3cruz/integracion_continua_back/tree/master/spec).
