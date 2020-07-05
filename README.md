@@ -1,3 +1,6 @@
+# Integración Travis CI
+[![Build Status](https://travis-ci.org/di3cruz/integracion_continua_back.svg?branch=master)](https://travis-ci.org/di3cruz/integracion_continua_back)
+
 # Integración Continua Backend
 
 Este proyecto hace parte del [proyecto Integracion_continua](https://github.com/users/di3cruz/projects/2) realizado para la materia Integración Continua del Politécnico Grancolombiano.
@@ -60,6 +63,36 @@ Sobre el controlador de usuarios:
 Sobre cada una de las rutas de gastos.
 
 Los tests pueden encontrarse en el [presente enlace](https://github.com/di3cruz/integracion_continua_back/tree/master/spec).
+
+## Actualización Proyecto
+
+Con el fin de lograr el correcto funcionamiento de las pruebas de la aplicación utilizando el framework de pruebas para Ruby on Rails llamado RSpec, y las herramientas de integración continua Docker, Jenkins, y Travis CI, se realizó lo siguiente:
+
+Se configuraron dos bases de datos PostgreSQL, utilizando el Platform as a Service (PaaS) Heroku, para los ambientes de pruebas y desarrollo, lo que permitió que las herramientas de Docker, Jenkins y TravisCI funcionaran correctamente sin depender de la configuración de una base de datos local para ambos ambientes. El API en producción se conservó en la URL: https://integracioncontinuaback.herokuapp.com
+
+Las bases de datos configuradas fueron:
+
+### Ambiente de Desarrollo
+
+Las credenciales para acceder dicha base de datos son las siguientes:
+
+- host: ec2-34-192-173-173.compute-1.amazonaws.com
+- database: d4a66sm07nhnc
+- user: odiefvgzgmrjrt
+- port: 5432
+- password: 29a1ca7ed1f793cdb5b3767627cf43c82f9c97cdc06c832829692f53447467b5
+
+### Ambiente de Pruebas
+
+Las credenciales para acceder dicha base de datos se muestran a continuación:
+
+- host: ec2-34-197-141-7.compute-1.amazonaws.com
+- database: df9kll7pq1gdln
+- user: hnqpoxlldhycuk
+- port: 5432
+- password: 5a8f5a094dccc2dfeae043449f394037064f0ebe2c36ee743c5f97a2ed871d4c
+
+Luego de realizar la configuración descrita se pudo validar que las 23 pruebas escritas por el equipo se ejecutan correctamente, y además todas pasan en este punto del desarrollo.
 
 ## Herramientas utilizadas
 

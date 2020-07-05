@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_06_14_203310) do
   end
 
   create_table "usuarios", force: :cascade do |t|
-    t.string "nombre"
-    t.string "correo_electronico"
+    t.string "nombre", limit: 255, default: "", null: false
+    t.string "correo_electronico", limit: 255, default: "", null: false
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
