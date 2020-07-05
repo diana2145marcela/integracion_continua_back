@@ -60,3 +60,34 @@ Sobre el controlador de usuarios:
 Sobre cada una de las rutas de gastos.
 
 Los tests pueden encontrarse en el [presente enlace](https://github.com/di3cruz/integracion_continua_back/tree/master/spec).
+
+## Herramientas utilizadas
+
+### Docker
+
+Docker es un proyecto de código abierto que sirve para automatizar el despliegue de aplicaciones dentro de contenedores de software. Puede ser ejecutado en diferentes máquinas siempre y cuando cuenten con Docker instalado, sin importar el sistema operativo que tenga dicha máquina.
+
+Docker beneficia tanto a desarrolladores como a testers ya que en el caso de desarolladores permite que estos puedan estar concentrados en el desarrollo de código sin preocuparse porque este pueda funcionar en la máquina en que se vaya a correr. En cuanto a las personas de pruebas facilita el entorno de prueba ya que es sencillo el hecho de crear y eliminar un contenedor facilitando también la ejecución de varios contenedores al tiempo en una misma máquina.
+
+Fuentes: 
+
+- https://aws.amazon.com/es/docker/
+- https://platzi.com/contributions/guia-del-curso-de-docker/
+
+### Jenkins
+
+Jenkis inició su desarrollo en el año de 2004 bajo el nombre de Hudson en Sun Microsystems. Es el principal servidor de automatización open source en JAVA. Proporciona complementos que protegen tanto la creación como implementación y automatización de diferentes proyectos, cuenta con una fácil distribución de trabajo en diferentes máquinas facilitando de esta forma las compilaciones, implementaciones en distintas plataformas y pruebas, lo cual permite descubrir fallos de una forma rápida.
+
+Mediante la integración continua Jenkis refuerza la automatización extensible del proceso de desarrollo de software ya que puede utilizarse como un servidor CI o por el contrario puede tener entregas continuas de cualquier proyecto. 
+
+Fuente: https://www.jenkins.io/
+
+# Travis CI
+
+Sistema de integración continua que puede ser gratuito o pago dependiendo del proyecto. Se integra con Github y de forma automática realiza la ejecución del pipeline que está definido para el pull request. Testea gran varied de aplicaciones realizadas en diferentes tecnologías como lo son: Ruby, Objetive-C, Java, Node, entre otras.
+
+Travis permite a los desarrolladores testear de forma completa las diferentes aplicaciones y posterior a esto realizar el deploy sin presentar inconveniente alguno.
+
+Una de las ventajas de usar Travis es que se encuentra compuesto por múltiples tiempos de ejecución o data stores permitiendo así realizar pruebas de las aplicaciones en diferentes configuraciones sin necesidad de tenerlas instaladas localmente.
+
+Fuente: https://www.federico-toledo.com/travis-ci-para-integracion-continua/
