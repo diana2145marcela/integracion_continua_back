@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/di3cruz/integracion_continua_back.svg?branch=master)](https://travis-ci.org/di3cruz/integracion_continua_back)
+
 # Integración Continua Backend
 
 Este proyecto hace parte del [proyecto Integracion_continua](https://github.com/users/di3cruz/projects/2) realizado para la materia Integración Continua del Politécnico Grancolombiano.
