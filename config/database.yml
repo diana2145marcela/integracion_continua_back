@@ -20,8 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: integracion_continua_back
-  password: <%= ENV['INTEGRACION_CONTINUA_BACK_DATABASE_PASSWORD'] %>
+#  username: integracion_continua_back
+#  password: <%#= ENV['INTEGRACION_CONTINUA_BACK_DATABASE_PASSWORD'] %>
 #   password: somepassword # Diego's config
 
 development:
@@ -34,7 +34,11 @@ development:
 #  username: postgres
 #  password: somepassword
 #  host: db
-  database: integracion_continua_back_development
+  host: ec2-34-192-173-173.compute-1.amazonaws.com
+  database: d4a66sm07nhnc
+  user: odiefvgzgmrjrt
+  port: 5432
+  password: 29a1ca7ed1f793cdb5b3767627cf43c82f9c97cdc06c832829692f53447467b5
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,7 +67,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: integracion_continua_back_test
+  host: ec2-34-197-141-7.compute-1.amazonaws.com
+  database: df9kll7pq1gdln
+  user: hnqpoxlldhycuk
+  port: 5432
+  password: 5a8f5a094dccc2dfeae043449f394037064f0ebe2c36ee743c5f97a2ed871d4c
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
